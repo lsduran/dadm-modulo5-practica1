@@ -17,15 +17,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Pokedex" translatesAutoresizingMaskIntoConstraints="NO" id="fWV-Zb-akc">
-                                <rect key="frame" x="20" y="392" width="353" height="68"/>
+                                <rect key="frame" x="9.6666666666666572" y="392" width="374" height="68"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="fWV-Zb-akc" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Hbc-O1-kqq"/>
-                            <constraint firstItem="fWV-Zb-akc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="R7T-rv-83G"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fWV-Zb-akc" secondAttribute="trailing" constant="20" id="SRA-7s-q4Z"/>
+                            <constraint firstItem="fWV-Zb-akc" firstAttribute="leading" relation="lessThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="R7T-rv-83G"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="fWV-Zb-akc" secondAttribute="trailing" constant="20" id="SRA-7s-q4Z"/>
                             <constraint firstItem="fWV-Zb-akc" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="lhJ-Ve-RqF"/>
                         </constraints>
                     </view>

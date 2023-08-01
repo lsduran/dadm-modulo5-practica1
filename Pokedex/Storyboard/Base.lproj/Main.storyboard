@@ -108,18 +108,18 @@
                                 </constraints>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" bouncesZoom="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="kuI-o1-474" userLabel="Table View Abilities">
-                                <rect key="frame" x="76.666666666666686" y="450" width="240" height="372"/>
+                                <rect key="frame" x="16" y="450" width="361" height="372"/>
                                 <color key="backgroundColor" name="NewColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="abilityCell" id="pgv-py-gXQ" userLabel="AbilityCell" customClass="AbilityTableViewCell" customModule="Pokedex" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="50" width="240" height="43.666667938232422"/>
+                                        <rect key="frame" x="0.0" y="50" width="361" height="43.666667938232422"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="pgv-py-gXQ" id="PKZ-CN-b68">
-                                            <rect key="frame" x="0.0" y="0.0" width="240" height="43.666667938232422"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="361" height="43.666667938232422"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KPL-bC-ces">
-                                                    <rect key="frame" x="16" y="8.6666666666666661" width="224" height="26.333333333333336"/>
+                                                    <rect key="frame" x="20" y="8.6666666666666661" width="341" height="26.333333333333336"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -157,17 +157,17 @@
                         <viewLayoutGuide key="safeArea" id="dQg-dg-cUy"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="dQg-dg-cUy" firstAttribute="trailing" secondItem="kuI-o1-474" secondAttribute="trailing" constant="16" id="CnA-cv-J29"/>
                             <constraint firstItem="dQg-dg-cUy" firstAttribute="bottom" secondItem="kuI-o1-474" secondAttribute="bottom" constant="20" id="GOF-rt-60g"/>
-                            <constraint firstItem="3Sa-nB-WOe" firstAttribute="leading" secondItem="dQg-dg-cUy" secondAttribute="leading" constant="316" id="Hp3-Bu-Fyq"/>
+                            <constraint firstItem="3Sa-nB-WOe" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="dQg-dg-cUy" secondAttribute="leading" constant="316" id="Hp3-Bu-Fyq"/>
                             <constraint firstItem="dQg-dg-cUy" firstAttribute="trailing" secondItem="3Sa-nB-WOe" secondAttribute="trailing" constant="30" id="QQC-Mf-77K"/>
                             <constraint firstItem="IaW-qz-NBv" firstAttribute="centerX" secondItem="QyF-fM-fCK" secondAttribute="centerX" id="XHS-Tc-2FS"/>
                             <constraint firstItem="kuI-o1-474" firstAttribute="top" secondItem="BFB-HE-WgN" secondAttribute="bottom" constant="48" id="Y0V-Cy-wB7"/>
-                            <constraint firstItem="kuI-o1-474" firstAttribute="leading" secondItem="BFB-HE-WgN" secondAttribute="leading" id="cae-qG-Lju"/>
+                            <constraint firstItem="kuI-o1-474" firstAttribute="leading" secondItem="dQg-dg-cUy" secondAttribute="leading" constant="16" id="cae-qG-Lju"/>
                             <constraint firstItem="IaW-qz-NBv" firstAttribute="top" secondItem="dQg-dg-cUy" secondAttribute="top" constant="77" id="f09-C9-IiG"/>
                             <constraint firstItem="BFB-HE-WgN" firstAttribute="top" secondItem="IaW-qz-NBv" secondAttribute="bottom" constant="22" id="kWS-22-lS8"/>
                             <constraint firstItem="BFB-HE-WgN" firstAttribute="centerX" secondItem="dQg-dg-cUy" secondAttribute="centerX" id="nK6-j0-6j2"/>
                             <constraint firstItem="3Sa-nB-WOe" firstAttribute="top" secondItem="dQg-dg-cUy" secondAttribute="top" constant="30" id="q3d-4q-IS6"/>
-                            <constraint firstItem="kuI-o1-474" firstAttribute="trailing" secondItem="BFB-HE-WgN" secondAttribute="trailing" id="z2b-Pl-wLt"/>
                         </constraints>
                     </view>
                     <connections>
@@ -184,13 +184,13 @@
     <resources>
         <image name="xmark" catalog="system" width="128" height="113"/>
         <namedColor name="NewColor">
-            <color red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.46200001239776611" green="0.83799999952316284" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="PrimaryColor">
-            <color red="0.2369007766" green="0.36648088690000002" blue="0.70585995909999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.2370000034570694" green="0.36599999666213989" blue="0.70599997043609619" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <namedColor name="SecondaryColor">
-            <color red="0.45085787770000002" green="0.98829740290000001" blue="0.83763033149999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.45100000500679016" green="0.98799997568130493" blue="0.83799999952316284" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
