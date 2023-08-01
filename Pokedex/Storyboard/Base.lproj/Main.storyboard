@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Pokemon View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="PokemonViewController" customModule="Pokedex" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="XK1-t6-6oD" userLabel="Pkn Table View">
+                                <rect key="frame" x="16" y="59" width="361" height="759"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="pokemonCell" id="4xZ-Ct-vl1" customClass="PokemonTableViewCell" customModule="Pokedex" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="361" height="130.33332824707031"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4xZ-Ct-vl1" id="8K7-fB-GAH">
+                                            <rect key="frame" x="0.0" y="0.0" width="361" height="130.33332824707031"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qdD-3e-7jp">
+                                                    <rect key="frame" x="0.0" y="0.0" width="120" height="130.33333333333334"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="130" id="FUb-PD-dWG"/>
+                                                        <constraint firstAttribute="width" constant="120" id="Hm4-2U-Rjw"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lBb-c3-LXc">
+                                                    <rect key="frame" x="140" y="51.000000000000007" width="221" height="28.333333333333336"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                                    <color key="textColor" name="PrimaryColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="qdD-3e-7jp" firstAttribute="leading" secondItem="8K7-fB-GAH" secondAttribute="leading" id="7Y8-Ex-czf"/>
+                                                <constraint firstItem="qdD-3e-7jp" firstAttribute="top" secondItem="8K7-fB-GAH" secondAttribute="top" id="MMX-mc-jTs"/>
+                                                <constraint firstItem="lBb-c3-LXc" firstAttribute="top" secondItem="8K7-fB-GAH" secondAttribute="topMargin" constant="40" id="MfI-k9-rBx"/>
+                                                <constraint firstAttribute="bottom" secondItem="qdD-3e-7jp" secondAttribute="bottom" id="PE0-i0-OHD"/>
+                                                <constraint firstItem="lBb-c3-LXc" firstAttribute="leading" secondItem="qdD-3e-7jp" secondAttribute="trailing" constant="20" id="h9G-nZ-oyD"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="lBb-c3-LXc" secondAttribute="bottom" constant="40" id="pG8-nM-OeA"/>
+                                                <constraint firstItem="lBb-c3-LXc" firstAttribute="trailing" secondItem="8K7-fB-GAH" secondAttribute="trailingMargin" constant="20" id="uRq-yG-6OK"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="imgPokemon" destination="qdD-3e-7jp" id="anM-yB-v6Y"/>
+                                            <outlet property="lblPokemon" destination="lBb-c3-LXc" id="F7y-Bs-MNq"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="P9I-Mh-cEB"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="nFp-Lp-0Ln"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="XK1-t6-6oD" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="B9q-p7-EaR"/>
+                            <constraint firstItem="XK1-t6-6oD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Jcc-eQ-fv9"/>
+                            <constraint firstItem="XK1-t6-6oD" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="mFy-GQ-NuD"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="XK1-t6-6oD" secondAttribute="trailing" constant="16" id="sM8-Ey-Fuu"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="pknTableView" destination="XK1-t6-6oD" id="hbg-0I-XDy"/>
+                        <segue destination="ZBL-tZ-BlS" kind="presentation" identifier="detailSegue" id="O0u-rN-Jmn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="46.564885496183201" y="-2.1126760563380285"/>
+        </scene>
+        <!--Pokemon Detail View Controller-->
+        <scene sceneID="TPn-uC-Hb2">
+            <objects>
+                <viewController id="ZBL-tZ-BlS" customClass="PokemonDetailViewController" customModule="Pokedex" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QyF-fM-fCK">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Sa-nB-WOe">
+                                <rect key="frame" x="316" y="30" width="47" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="xmark" catalog="system" title="">
+                                    <color key="baseForegroundColor" systemColor="systemRedColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="CloseDetail:" destination="ZBL-tZ-BlS" eventType="touchUpInside" id="RCv-Kq-XqV"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BFB-HE-WgN" userLabel="Image Pokemon">
+                                <rect key="frame" x="76.666666666666686" y="142" width="240" height="260"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="9f0-eu-45G"/>
+                                    <constraint firstAttribute="height" constant="260" id="qVX-6c-DqV"/>
+                                </constraints>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" bouncesZoom="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="kuI-o1-474" userLabel="Table View Abilities">
+                                <rect key="frame" x="76.666666666666686" y="450" width="240" height="372"/>
+                                <color key="backgroundColor" name="NewColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="abilityCell" id="pgv-py-gXQ" userLabel="AbilityCell" customClass="AbilityTableViewCell" customModule="Pokedex" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="240" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="pgv-py-gXQ" id="PKZ-CN-b68">
+                                            <rect key="frame" x="0.0" y="0.0" width="240" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KPL-bC-ces">
+                                                    <rect key="frame" x="16" y="8.6666666666666661" width="224" height="26.333333333333336"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" name="SecondaryColor"/>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="KPL-bC-ces" secondAttribute="trailing" id="UzI-UU-L7S"/>
+                                                <constraint firstItem="KPL-bC-ces" firstAttribute="centerY" secondItem="PKZ-CN-b68" secondAttribute="centerY" id="bSG-4U-uIp"/>
+                                                <constraint firstItem="KPL-bC-ces" firstAttribute="leading" secondItem="PKZ-CN-b68" secondAttribute="leadingMargin" id="iS2-cV-aLC"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="lblName" destination="KPL-bC-ces" id="k11-6J-Vl1"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="dataSource" destination="ZBL-tZ-BlS" id="Zlb-ao-CDE"/>
+                                    <outlet property="delegate" destination="ZBL-tZ-BlS" id="RLf-5C-Z4a"/>
+                                </connections>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IaW-qz-NBv" userLabel="Pokemon Name">
+                                <rect key="frame" x="154.33333333333334" y="77" width="84.666666666666657" height="43"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <color key="textColor" name="PrimaryColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="dQg-dg-cUy"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="dQg-dg-cUy" firstAttribute="bottom" secondItem="kuI-o1-474" secondAttribute="bottom" constant="20" id="GOF-rt-60g"/>
+                            <constraint firstItem="3Sa-nB-WOe" firstAttribute="leading" secondItem="dQg-dg-cUy" secondAttribute="leading" constant="316" id="Hp3-Bu-Fyq"/>
+                            <constraint firstItem="dQg-dg-cUy" firstAttribute="trailing" secondItem="3Sa-nB-WOe" secondAttribute="trailing" constant="30" id="QQC-Mf-77K"/>
+                            <constraint firstItem="IaW-qz-NBv" firstAttribute="centerX" secondItem="QyF-fM-fCK" secondAttribute="centerX" id="XHS-Tc-2FS"/>
+                            <constraint firstItem="kuI-o1-474" firstAttribute="top" secondItem="BFB-HE-WgN" secondAttribute="bottom" constant="48" id="Y0V-Cy-wB7"/>
+                            <constraint firstItem="kuI-o1-474" firstAttribute="leading" secondItem="BFB-HE-WgN" secondAttribute="leading" id="cae-qG-Lju"/>
+                            <constraint firstItem="IaW-qz-NBv" firstAttribute="top" secondItem="dQg-dg-cUy" secondAttribute="top" constant="77" id="f09-C9-IiG"/>
+                            <constraint firstItem="BFB-HE-WgN" firstAttribute="top" secondItem="IaW-qz-NBv" secondAttribute="bottom" constant="22" id="kWS-22-lS8"/>
+                            <constraint firstItem="BFB-HE-WgN" firstAttribute="centerX" secondItem="dQg-dg-cUy" secondAttribute="centerX" id="nK6-j0-6j2"/>
+                            <constraint firstItem="3Sa-nB-WOe" firstAttribute="top" secondItem="dQg-dg-cUy" secondAttribute="top" constant="30" id="q3d-4q-IS6"/>
+                            <constraint firstItem="kuI-o1-474" firstAttribute="trailing" secondItem="BFB-HE-WgN" secondAttribute="trailing" id="z2b-Pl-wLt"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="BtnClose" destination="3Sa-nB-WOe" id="odf-3l-1CS"/>
+                        <outlet property="imgPokemon" destination="BFB-HE-WgN" id="L56-MB-8M8"/>
+                        <outlet property="lblPokemonName" destination="IaW-qz-NBv" id="ZTc-NT-kEz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="76f-5H-SbV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1052.6717557251909" y="-2.1126760563380285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="xmark" catalog="system" width="128" height="113"/>
+        <namedColor name="NewColor">
+            <color red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="PrimaryColor">
+            <color red="0.2369007766" green="0.36648088690000002" blue="0.70585995909999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="SecondaryColor">
+            <color red="0.45085787770000002" green="0.98829740290000001" blue="0.83763033149999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
